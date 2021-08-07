@@ -1,0 +1,22 @@
+'use strict';
+const calcAverege = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const avgDolphins = calcAverege(85, 54, 41);
+const avgKoalas = calcAverege(23, 34, 27);
+console.log(avgDolphins, avgKoalas);
+ 
+checkWinner(avgDolphins, avgKoalas);
+ 
+function checkWinner(avgD, avgK) {
+    if (avgD >= 2 * avgK) {
+        console.log(`Dolphins win (${avgD} vs ${avgK})`);
+        return;
+    } else if (avgK > 2 * avgD) {
+        console.log(`Koalas win (${avgK} vs ${avgD})`);
+        return;
+    } else {
+        console.log(`No winner`)
+        return;
+    }
+ 
+}
